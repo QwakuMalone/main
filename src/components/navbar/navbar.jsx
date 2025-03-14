@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 
 export default function Navbar({ isDarkMode, setIsDarkMode }) {
@@ -66,6 +67,8 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
         }
     }
 
+    const router = useRouter()
+
     return ( 
         <div
 
@@ -74,7 +77,7 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
             
             <div className="flex lg:gap-20 w-full  px-5 lg:w-full md:px-16  lg:px-24 justify-between py-3 items-center ">
                 {/* LOGO */}
-                <div className="w-1/10 h-full ">
+                <div className="w-1/10 h-full " onClick={()=>{router.push('#home')}}>
                     <svg  className="size-12 mt-2.5 dark:fill-white " viewBox="0 0 24 24"><path d="M16.5 2.75c-.965 0-1.75.785-1.75 1.75s.785 1.75 1.75 1.75 1.75-.785 1.75-1.75-.785-1.75-1.75-1.75zm0-2.75c2.481 0 4.5 2.019 4.5 4.5s-2.019 4.5-4.5 4.5-4.5-2.019-4.5-4.5 2.019-4.5 4.5-4.5zm-5.5 17.01s2.539 3.087 4.022 4.944c1.163 1.454 2.025 2.046 3.462 2.046 1.411 0 2.516-1.065 2.516-2.309 0-.539-.183-1.111-.594-1.646-1.52-1.973-2.406-3.035-2.406-3.035h-7zm-3.136-.01h-2.864c-.551 0-1-.449-1-1s.449-1 1-1h13.279c.893 0 1.4.248 1.963.958.96 1.211 2.505 3.163 2.562 3.251.736-.87 1.196-1.98 1.196-3.209 0-2.761-2.239-5-5-5h-14c-2.761 0-5 2.239-5 5s2.239 5 5 5h6.141c-1.144-1.405-3.277-4-3.277-4zm.05-12.5l2.086 2.086-1.414 1.414-2.086-2.086-2.086 2.086-1.414-1.414 2.086-2.086-2.086-2.086 1.414-1.414 2.086 2.086 2.086-2.086 1.414 1.414-2.086 2.086z" /></svg>
                 </div>
 
@@ -93,7 +96,7 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
                     <button onClick={() => { setIsDarkMode(!isDarkMode) }} className="size-8">
                         <motion.svg
                             animate={isDarkMode ? { rotate: 180 } : {}}
-                            xmlns="http://www.w3.org/2000/svg" className="size-8 dark:fill-white " viewBox="0 0 24 24"><path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm2 0c0-5.514 4.486-10 10-10v20c-5.514 0-10-4.486-10-10z" /></motion.svg>
+                            xmlns="http://www.w3.org/2000/svg" className="size-8 dark:fill-white pr-1" viewBox="0 0 24 24"><path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm2 0c0-5.514 4.486-10 10-10v20c-5.514 0-10-4.486-10-10z" /></motion.svg>
                     </button>
 
 
@@ -105,15 +108,15 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
                             <motion.div
                                 variants={topBtnVariants}
                                 animate={open ? 'opened' : 'closed'}
-                                className="w-9 h-1 bg-black origin-left "></motion.div>
+                                className="w-9 h-1 bg-black z-50 origin-left dark:bg-white "></motion.div>
                             <motion.div
                                 variants={midBtnVariants}
                                 animate={open ? 'opened' : 'closed'}
-                                className="w-9 h-1 bg-black"></motion.div>
+                                className="w-9 h-1 bg-black z-50 dark:bg-white"></motion.div>
                             <motion.div
                                 variants={downBtnVariants}
                                 animate={open ? 'opened' : 'closed'}
-                                className="w-9 h-1 bg-black origin-left"></motion.div>
+                                className="w-9 h-1 bg-black z-50 origin-left dark:bg-white"></motion.div>
                         </button>
 
 
