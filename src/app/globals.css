@@ -25,7 +25,9 @@
     --foreground: #ededed;
   }
 }
-
+*{
+  @apply transition-colors duration-100
+}
 body {
   
  @apply h-screen w-full overflow-x-hidden dark:bg-gray-900 dark:text-white
