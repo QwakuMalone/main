@@ -25,17 +25,18 @@ export default function MyWork() {
 
                         src="/project.jpg" alt="" className="object-fill  size-full rounded-md" />
                     <motion.div 
-                    animate={hove1?{y:-20}:{}}
-                    className="absolute w-8/12 h-2/6 lg:bottom-6 md:left-26  bottom-4 right-14 rounded-md bg-slate-100  flex ">
+                    initial={{opacity:0, y:0}} 
+                    animate={hove1?{opacity:1,y:-20, transition:{duration:0.5}}:{}}
+                    className="absolute w-8/12 h-2/6 lg:bottom-1/10 md:left-1/6  bottom-4 right-14 rounded-md bg-slate-100  flex ">
 
-                        <div className="w-4/6 h-full flex flex-col md:py-4 pl-10">
+                        <div className="w-4/6 h-full flex flex-col justify-center md:py-1 pl-10 text-black">
                             <h1 className=" font-semibold md:text-xl tracking-wide">Frontend project</h1>
                             <h2 className="text-sm md:text-lg">Web Design</h2>
                         </div>
 
-                        <div className="w-2/6 h-full pt-3">
-                            <svg className=" size-10/12 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m7 16 4-4-4-4m6 8 4-4-4-4" />
+                        <div className="w-2/6 h-full pt-3 ">
+                            <svg className=" size-10/12 text-gray-800  stroke-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path  strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m7 16 4-4-4-4m6 8 4-4-4-4" />
                             </svg>
                         </div>
                     </motion.div>
@@ -50,14 +51,15 @@ export default function MyWork() {
                         whileHover={{ scale: 1.2, transition: { ease: 'easeInOut', duration: 0.5 } }}
 
                         src="/ux.jpg" alt="" className="object-fill  size-full rounded-md" />
-                    <motion.div 
-                    animate={hove2?{y:-20}:{}}
-                    className="absolute w-8/12 h-2/6 lg:bottom-6 md:left-26 bottom-4 right-14 rounded-md bg-slate-100 hover:opacity-80 flex ">
-                        <div className="w-4/6 h-full flex flex-col md:py-6 pl-10">
+                    <motion.div
+                    initial={{opacity:0, y:0}} 
+                    animate={hove2?{opacity:1,y:-20 ,transition:{duration:0.5}}:{}}
+                    className="absolute w-8/12 h-2/6 lg:bottom-1/12 md:left-1/6 bottom-4 right-14 rounded-md text-black bg-slate-100 hover:opacity-80 flex ">
+                        <div className="w-4/6 h-full flex flex-col justify-center md:py-1 pl-10">
                             <h1 className="  md:text-xl font-semibold tracking-wide">UX/UI designing </h1>
                             <h2 className="text-sm md:text-lg">UX/UI designs</h2>
                         </div>
-                        <div className="w-2/6 h-full pt-3 "> <svg className=" size-10/12 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <div className="w-2/6 h-full pt-3 "> <svg className=" size-10/12 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m7 16 4-4-4-4m6 8 4-4-4-4" />
                         </svg>
                         </div>

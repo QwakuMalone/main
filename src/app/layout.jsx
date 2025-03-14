@@ -6,7 +6,7 @@ export default function Layout({ children }) {
 
 
     return (
-        <html className="scroll-smooth">
+        <html className="scroll-smooth ">
             <body>
 
                 {children}

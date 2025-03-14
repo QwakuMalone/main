@@ -10,12 +10,12 @@ export default function Footer() {
                     ofoefrancisteye@gmail.com </p>
             </div>
             <div className="border-t-2 border-gray-400 w-11/12 h-1/4 flex justify-between lg:gap-40 text-gray-500 text-lg">
-            <p>@2025 Atobra.dev. All rights reserved. </p>
-            <div className="flex gap-10">
-                <p>Term of Services </p>
-                <p>Privacy Policy</p>
-                <p>Connect with me</p>
-            </div>
+                <p>@2025 Atobra.dev. All rights reserved. </p>
+                <div className="flex gap-10">
+                    <p>Term of Services </p>
+                    <p>Privacy Policy</p>
+                    <p>Connect with me</p>
+                </div>
 
             </div>
         </div>

@@ -1,11 +1,14 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --shadow-black: 5px 5px 0 #000;
-  
+  --shadow-black: 7px 7px 0 #000;
+  --shadow-white:7px 7px 0 #FFFFFF;
+   
 }
 *{
   box-sizing: border-box;
@@ -25,7 +28,7 @@
 
 body {
   
- @apply h-screen w-full overflow-x-hidden 
+ @apply h-screen w-full overflow-x-hidden dark:bg-gray-900 dark:text-white
 }
 
 @font-face {
